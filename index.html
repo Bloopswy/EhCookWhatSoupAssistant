@@ -161,11 +161,11 @@
         }
         
         .dark-mode .nav-logo {
-            color: #FF9999;
+            color: #C97D60;
         }
         
         .dark-mode .nav-logo:hover {
-            color: #FFB3B3;
+            color: #D4A574;
         }
         
         .dark-mode .nav-link {
@@ -174,19 +174,19 @@
         
         .dark-mode .nav-link:hover,
         .dark-mode .nav-link.active {
-            color: #FF9999;
+            color: #C97D60;
         }
         
         .dark-mode .nav-link.active::after {
-            background-color: #FF9999;
+            background-color: #C97D60;
         }
         
         .dark-mode .category-hero {
-            background: linear-gradient(135deg, #3D2020 0%, #2D1515 100%);
+            background: linear-gradient(135deg, #3D3020 0%, #2D2515 100%);
         }
         
         .dark-mode .category-title {
-            color: #FFB3B3;
+            color: #D4A574;
         }
         
         .dark-mode .category-description {
@@ -208,7 +208,7 @@
         }
         
         .dark-mode .chatbot-card-header h2 {
-            color: #FFB3B3;
+            color: #D4A574;
         }
         
         .dark-mode .bot-description,
@@ -227,7 +227,7 @@
         }
         
         .dark-mode .user-message .message-content {
-            background-color: #D65555;
+            background-color: #C97D60;
         }
         
         .dark-mode .chat-input-wrapper {
@@ -247,15 +247,15 @@
         
         .dark-mode .chat-input:focus {
             background-color: #252525;
-            border-color: #D65555;
+            border-color: #C97D60;
         }
         
         .dark-mode .chat-send-btn {
-            background-color: #D65555;
+            background-color: #C97D60;
         }
         
         .dark-mode .chat-send-btn:hover:not(:disabled) {
-            background-color: #C94444;
+            background-color: #B86D50;
         }
         
         .dark-mode .icon-btn {
@@ -271,7 +271,7 @@
         }
         
         .dark-mode .footer {
-            background: linear-gradient(135deg, #3D2020 0%, #2D1515 100%);
+            background: linear-gradient(135deg, #3D3020 0%, #2D2515 100%);
         }
         
         .chat-timestamp {
@@ -279,6 +279,232 @@
             color: #666;
             font-style: italic;
             margin-top: 8px;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 12px 15px;
+                gap: 10px;
+            }
+
+            .nav-logo {
+                order: 1;
+                font-size: 1.2rem;
+            }
+
+            .nav-logo img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .nav-links {
+                order: 2;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 10px;
+                gap: 10px;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .dark-mode-toggle {
+                order: 3;
+                margin-left: auto;
+            }
+
+            .category-hero {
+                padding: 40px 20px;
+            }
+
+            .category-title {
+                font-size: 2.2rem;
+            }
+
+            .category-description {
+                font-size: 1rem;
+            }
+
+            .chatbot-section {
+                padding: 30px 15px;
+            }
+
+            .chatbot-container {
+                height: 650px;
+                max-width: 100%;
+            }
+
+            .chatbot-card-header {
+                padding: 15px;
+            }
+
+            .header-top {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .bot-info {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .bot-icon {
+                font-size: 2rem;
+            }
+
+            .chatbot-card-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .bot-description {
+                font-size: 0.85rem;
+            }
+
+            #refreshButton {
+                align-self: flex-end;
+            }
+
+            .message-content {
+                max-width: 85%;
+                font-size: 0.9rem;
+                padding: 10px 14px;
+            }
+
+            .chat-input-wrapper {
+                padding: 12px;
+                gap: 8px;
+            }
+
+            .chat-input {
+                font-size: 0.9rem;
+                padding: 10px 12px;
+            }
+
+            .chat-send-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding: 30px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .container {
+                padding: 10px 12px;
+            }
+
+            .nav-logo {
+                font-size: 1rem;
+            }
+
+            .nav-logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+            }
+
+            .category-title {
+                font-size: 1.8rem;
+            }
+
+            .category-description {
+                font-size: 0.95rem;
+            }
+
+            .chatbot-section {
+                padding: 20px 10px;
+            }
+
+            .chatbot-container {
+                height: calc(100vh - 320px);
+                min-height: 550px;
+                border-radius: 12px;
+                border-bottom: 2px solid #E8D4BE;
+            }
+
+            .chatbot-card-header {
+                padding: 12px;
+            }
+
+            .bot-info {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .bot-icon {
+                font-size: 2.5rem;
+            }
+
+            .chatbot-card-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .bot-description {
+                font-size: 0.8rem;
+            }
+
+            .chat-timestamp {
+                font-size: 0.75rem;
+            }
+
+            .message-content {
+                max-width: 90%;
+                font-size: 0.85rem;
+                padding: 8px 12px;
+            }
+
+            .chat-messages {
+                padding: 16px;
+            }
+
+            .chat-input-wrapper {
+                flex-direction: column;
+                padding: 10px;
+                gap: 8px;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+
+            .chat-input {
+                width: 100%;
+                font-size: 0.85rem;
+            }
+
+            .chat-send-btn {
+                width: 100%;
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .icon-btn {
+                width: 36px;
+                height: 36px;
+            }
+
+            .icon-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .footer {
+                padding: 25px 15px;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
