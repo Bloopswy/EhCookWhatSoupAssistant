@@ -91,13 +91,13 @@ function getRecipeDescription(soupName) {
 // Get recipe image
 function getRecipeImage(soupName) {
     const images = {
-        'ABC Soup': 'Pictures/abcsoup.jpg',
+        'ABC Soup': 'Pictures/AbcSoup.jpg',
         'Watercress Soup': 'Pictures/watercress.jpg',
         'Lotus Root with Peanut Soup': 'Pictures/lotus.jpg',
         'Old Cucumber Soup': 'Pictures/oldcucumbersoup.jpg',
         'Herbal Chicken Soup': 'Pictures/chinesechickenherbalsoup.jpg'
     };
-    return images[soupName] || 'Pictures/abcsoup.jpg';
+    return images[soupName] || 'Pictures/AbcSoup.jpg';
 }
 
 // Display recipe cards
