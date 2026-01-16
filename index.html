@@ -513,10 +513,11 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-logo">
-                <img src="logo.png" alt="EhCookWhat Logo">
+                <img src="Pictures/logo.png" alt="EhCookWhat Logo">
                 <span>EhCookWhat</span>
             </a>
             <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
                 <a href="index.html" class="nav-link active">Soup</a>
                 <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle dark mode" data-tooltip="Dark Mode">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -531,21 +532,65 @@
     <!-- Category Hero -->
     <section class="category-hero">
         <div class="container">
-            <h1 class="category-title">Soup Recipes</h1>
-            <p class="category-description">Warm, nourishing soups that comfort the soul. From simple egg drop to hearty hot and sour, find your perfect bowl.</p>
+            <h1 class="category-title">Discover Your Perfect Soup</h1>
+            <p class="category-description">
+                Warm, nourishing soups that comfort the soul.<br>
+                From simple egg drop to hearty hot and sour, find your perfect bowl.
+            </p>
         </div>
     </section>
+
+    <!-- Recipe Cards Section -->
+    <section class="recipe-section">
+        <div class="container">
+            <h2 class="section-title"><strong>Featured Soup Recipes</strong></h2>
+            <div id="recipeGrid" class="recipe-grid">
+                <!-- Recipe cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRecipeModal()">&times;</button>
+            <div class="modal-header">
+                <img id="modalImage" src="" alt="Soup Image" class="modal-image">
+                <h2 id="modalTitle" class="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="recipe-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Cooking Time:</span>
+                        <span id="modalCookTime" class="meta-value"></span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Difficulty:</span>
+                        <span id="modalDifficulty" class="meta-value"></span>
+                    </div>
+                </div>
+                <div class="recipe-section-detail">
+                    <h3>Ingredients</h3>
+                    <ul id="modalIngredients" class="ingredients-list"></ul>
+                </div>
+                <div class="recipe-section-detail">
+                    <h3>Instructions</h3>
+                    <ol id="modalInstructions" class="instructions-list"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Chatbot Section -->
     <section class="chatbot-section">
         <div class="container">
+            <h2 class="section-title"><strong>Soup Recipe Assistant</strong></h2>
             <div class="chatbot-container">
                 <div class="chatbot-card-header">
                     <div class="header-top">
                         <div class="bot-info">
-                            <div class="bot-icon">🤖</div>
                             <div>
-                                <h2>Ask EhCookWhat AI</h2>
+                                <h2>EhCookWhat Soup Assistant</h2>
                                 <p class="bot-description">Tell me what ingredients you have or what you're in the mood for and I'll suggest the perfect recipe!</p>
                             </div>
                         </div>
@@ -586,6 +631,7 @@
         </div>
     </footer>
 
+    <script src="recipe.js"></script>
     <script src="chatbot.js"></script>
 </body>
 </html>
